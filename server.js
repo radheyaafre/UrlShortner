@@ -38,7 +38,6 @@ app.post('/shortUrls', async(req, res)=>{
         
     }
     else{
-        url.clicks++;
         url.save();
     }
 
