@@ -35,9 +35,13 @@ app.post('/shortUrls', async(req, res)=>{
         await ShortUrl.create({
             full: req.body.fullUrl
         });
+        
     }
-    url.clicks++;
-    url.save();
+    else{
+        url.clicks++;
+        url.save();
+    }
+
     res.redirect('/');
 })
 
